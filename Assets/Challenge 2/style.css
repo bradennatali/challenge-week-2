@@ -1,0 +1,180 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --dark: rgb(86, 86, 86);
+    --light: lightgray;
+    --white: white;
+    --accent: #592500;
+    --accent2: rgb(204, 85, 0);
+    --accent3: beige;
+    --accent4: navy;
+    --accent5: #808000;
+}
+
+::selection {
+    color: var(--accent5);
+}
+
+html {
+    font-size: 70%;
+    min-height: 100%;
+    background-image: linear-gradient(180deg, rgb(164, 164, 164), white);
+}
+
+body {
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.25;
+    min-width: none;
+    min-height: none
+    ;
+}
+
+main {
+    max-width: 1200px;
+    margin: 10px;
+    line-height: 1.5;
+    margin: 2% auto;
+    display: block;
+}
+
+a {
+    color: var(--dark);
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent2);
+}
+
+nav{
+    background-image: linear-gradient(to bottom right, beige, white);
+    color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid black; 
+}
+
+.reflist {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: underline;
+    min-width: 300px;
+    list-style: none;
+}
+
+nav a {
+    color: var(--dark);
+}
+
+nav a:hover {
+    color: var(--accent2)
+}
+
+.pagetitle {
+    text-align: left;
+    margin: 3px;
+    font-size: 3.5rem;
+}
+
+figure {
+   align-items: center;
+}
+
+.container {
+    display: flex;
+}
+
+ /* This was the hardest part of the code. 
+ Getting the Aside boxes and section boxes to stack vertically */
+
+aside {
+    border-right: 3px solid beige;
+    padding: 10px;
+    margin: 5px;
+    flex: 1;
+    text-align: right;
+}
+
+
+section {
+    margin: 10px;
+    text-align: left;
+    padding: 10px;
+    flex: 3;
+    text-align: left;
+}
+
+img {
+    border: solid 5px beige;
+    max-width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+img:hover {
+    opacity: 0.75;
+    transition: all 0.25s ease-in-out;
+}
+
+.worktitle {
+    background-color: beige;
+    display: inline-flex;
+    padding: 2px;
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+footer {
+    text-align: center;
+}
+
+footer ul{
+    list-style: none;
+    color: var(--dark);
+}
+
+footer a {
+    color: var(--dark);
+}
+
+footer a:hover {
+    color: var(--accent2);
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    
+    main,
+    nav {
+      flex-direction: column;
+    }
+
+    .card,
+    .cardheader {
+        flex-direction: column;
+    }
+
+}
+
+
+
